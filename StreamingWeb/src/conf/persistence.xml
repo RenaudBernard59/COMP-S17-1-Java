@@ -2,6 +2,15 @@
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
   <persistence-unit name="PU" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>streamingweb.entity.Pays</class>
+    <class>streamingweb.entity.Serie</class>
+    <class>streamingweb.entity.Film</class>
+    <class>streamingweb.entity.Genre</class>
+    <class>streamingweb.entity.Episode</class>
+    <class>streamingweb.entity.Sequence</class>
+    <class>streamingweb.entity.Saison</class>
+    <class>streamingweb.entity.Personne</class>
+    <class>streamingweb.entity.Lien</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:derby://localhost:1527/sample2"/>
