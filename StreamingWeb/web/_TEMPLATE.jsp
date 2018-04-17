@@ -16,6 +16,7 @@
         <c:import url="_ENTETE.jsp"/>
         <c:import url="_MENU.jsp"/>
         <main>
+            <p>Mon contenu</p>
         </main>
         <c:import url="_PIED.jsp"/>
     </body>
