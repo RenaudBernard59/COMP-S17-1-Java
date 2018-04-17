@@ -4,6 +4,7 @@
     Author     : renob
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -12,6 +13,10 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <c:import url="_ENTETE.jsp"/>
+        <c:import url="_MENU.jsp"/>
+        <main>
+        </main>
+        <c:import url="_PIED.jsp"/>
     </body>
 </html>
