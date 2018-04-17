@@ -6,5 +6,5 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <footer>
-    <small>&COPY; 2018</small>
+    <small>© 2018 - Streaming web™ - Renaud Bernard®</small>
 </footer>
