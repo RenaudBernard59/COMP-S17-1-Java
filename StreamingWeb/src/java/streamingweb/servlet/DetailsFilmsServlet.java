@@ -33,10 +33,10 @@ public class DetailsFilmsServlet extends HttpServlet {
         Film film = service.rechercheParId(Long.parseLong(idString));
 
         // 3. Set film en attribut requete
-       
+        req.setAttribute("film", film);
        
         // 4. Forwart to KSP
-        
+        req.getRequestDispatcher("detailsFilm.jsp");
     }
 
     
