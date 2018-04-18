@@ -6,21 +6,12 @@
 package streamingweb.service;
 
 import java.util.List;
-import streamingweb.dao.FilmDAO;
-import streamingweb.dao.DetailsFilmDAOJpaImpl;
 import streamingweb.entity.Film;
 
 /**
  *
  * @author renob
  */
-public class FilmServiceImpl implements FilmService {
-    private FilmDAO dao = new DetailsFilmDAOJpaImpl();
-    @Override
-    public List<Film> listerFilms() {
-        
-        
-        return dao.lister();
-    }
-    
+public interface DetailsFilmService {
+    public List<String> listerElements();
 }

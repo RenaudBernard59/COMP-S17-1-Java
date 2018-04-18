@@ -14,10 +14,10 @@ import streamingweb.entity.Film;
  *
  * @author renob
  */
-public class FilmServiceImpl implements FilmService {
-    private FilmDAO dao = new DetailsFilmDAOJpaImpl();
+public class DetailsFilmServiceImpl implements FilmService {
+    private DetailsFilmDAO dao = new DetailsFilmDAOJpaImpl();
     @Override
-    public List<Film> listerFilms() {
+    public List<String> listerElements() {
         
         
         return dao.lister();

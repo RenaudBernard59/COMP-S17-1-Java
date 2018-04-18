@@ -16,9 +16,20 @@
         <c:import url="_ENTETE.jsp"/>
         <c:import url="_MENU.jsp"/>
         <main>
-            <c:forEach items="${listeDesFilms}" var="filmActuel">
-                <p>${filmActuel.titre} | <a href="detailsFilm?idDuFilm=${f.id}"><button>Détails</button></a></p>
+            <h2>Détails du Film</h2>
+            
+            <c:forEach items="${MonFilm}" var="filmSelectionner">
+                <p>Titre : ${filmSelectionner.titre} </p>   
+                    
+                    
             </c:forEach>
+            
+            doGet(req, resp);
+                req.getParaeter("");
+            
+            
+            
+            
         </main>
         <c:import url="_PIED.jsp"/>
     </body>
