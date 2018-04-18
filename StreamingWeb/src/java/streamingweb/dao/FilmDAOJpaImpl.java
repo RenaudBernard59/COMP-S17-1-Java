@@ -25,4 +25,10 @@ public class FilmDAOJpaImpl implements FilmDAO {
         return films;
     }
     
+    @Override
+    public Film trouverDetailFilm(long id) {
+        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+        return em.find(Film.class, id);
+        
+    }
 }

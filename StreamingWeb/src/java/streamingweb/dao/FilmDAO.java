@@ -13,5 +13,8 @@ import streamingweb.entity.Film;
  * @author renob
  */
 public interface FilmDAO {
+    public Film trouverDetailFilm(long id);
     public List<Film> lister();
 }
+
+

@@ -7,6 +7,7 @@ package streamingweb.service;
 
 import java.util.List;
 import streamingweb.entity.Film;
+import static streamingweb.entity.Film_.id;
 
 /**
  *
@@ -14,4 +15,8 @@ import streamingweb.entity.Film;
  */
 public interface FilmService {
     public List<Film> listerFilms();
+    
+    public Film rechercheParId(long id);
 }
+
+

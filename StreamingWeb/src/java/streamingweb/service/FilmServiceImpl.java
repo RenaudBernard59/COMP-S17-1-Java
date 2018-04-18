@@ -18,9 +18,11 @@ public class FilmServiceImpl implements FilmService {
     private FilmDAO dao = new FilmDAOJpaImpl();
     @Override
     public List<Film> listerFilms() {
-        
-        
         return dao.lister();
     }
-    
+        
+    @Override
+    public Film rechercheParId(long id) {
+        return dao.trouverDetailFilm(id);
+    }
 }
