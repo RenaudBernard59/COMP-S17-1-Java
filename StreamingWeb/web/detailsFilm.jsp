@@ -22,7 +22,12 @@
             <p>Année : ${film.annee} </p> 
             <p>Acteurs :  </p> 
             <p>Genre : ${film.genre.nom} </p> 
-            <p>Pays :  </p> 
+            <p>Pays :<ul>
+                <c:forEach items="${film.pays}" var="paysAct">
+                    <li>${paysAct.nom}</li>
+                </c:forEach>
+            </ul>
+            </p> 
             <p>Synposis : ${film.synopsis} </p> 
         </main>
         <c:import url="_PIED.jsp"/>

@@ -45,8 +45,8 @@ public class Film implements Serializable {
     private String synopsis;
     @Column(name = "TITRE")
     private String titre;
-    @ManyToMany(mappedBy = "filmList")
-    private List<Pays> paysList;
+    @ManyToMany(mappedBy = "films")
+    private List<Pays> pays;
     @ManyToMany(mappedBy = "filmList")
     private List<Personne> personneList;
     @ManyToMany(mappedBy = "filmList1")
@@ -104,12 +104,12 @@ public class Film implements Serializable {
         this.titre = titre;
     }
 
-    public List<Pays> getPaysList() {
-        return paysList;
+    public List<Pays> getPays() {
+        return pays;
     }
 
-    public void setPaysList(List<Pays> paysList) {
-        this.paysList = paysList;
+    public void setPays(List<Pays> pays) {
+        this.pays = pays;
     }
 
     public List<Personne> getPersonneList() {

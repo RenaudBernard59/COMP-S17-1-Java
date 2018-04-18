@@ -47,7 +47,7 @@ public class Pays implements Serializable {
         @JoinColumn(name = "PAYS_ID", referencedColumnName = "ID")}, inverseJoinColumns = {
         @JoinColumn(name = "FILMSPRODUITS_ID", referencedColumnName = "ID")})
     @ManyToMany
-    private List<Film> filmList;
+    private List<Film> films;
 
     public Pays() {
     }
@@ -80,12 +80,12 @@ public class Pays implements Serializable {
         this.serieList = serieList;
     }
 
-    public List<Film> getFilmList() {
-        return filmList;
+    public List<Film> getFilms() {
+        return films;
     }
 
-    public void setFilmList(List<Film> filmList) {
-        this.filmList = filmList;
+    public void setFilms(List<Film> films) {
+        this.films = films;
     }
 
     @Override
