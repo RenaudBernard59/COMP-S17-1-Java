@@ -23,15 +23,18 @@ public class DetailsFilmsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // 1. Réceptionner l'ID du film sélectionner
+        String idString = req.getParameter("idFilm");
+        
+        
+        // 2. Récupérer film à pardir de la SGBD et de l'ID
         
         
         
-        // 2.
         
-        
-        
-        
-       //3.
+        // 3. Set film en attribut requete
+       
+       
+        // 4. Forwart to KSP
         
     }
 
