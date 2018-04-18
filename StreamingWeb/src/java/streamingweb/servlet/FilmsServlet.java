@@ -30,7 +30,7 @@ public class FilmsServlet extends HttpServlet {
         List<Film> films = service.listerFilms();
 
         //2. Envoyer liste films film comme attribut request
-        req.setAttribute("listeDesFilms", req);
+        req.setAttribute("listeDesFilms", films);
 
         //3. Envoyer vers films.jsp
         req.getRequestDispatcher("films.jsp").forward(req, resp);
