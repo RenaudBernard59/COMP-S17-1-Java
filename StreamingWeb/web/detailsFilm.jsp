@@ -24,9 +24,9 @@
                     
             </c:forEach>
             
-            doGet(req, resp);
+<!--            doGet(req, resp);
                 req.getParaeter("");
-            
+            -->
             
             
             

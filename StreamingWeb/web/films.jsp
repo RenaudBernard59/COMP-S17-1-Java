@@ -17,7 +17,7 @@
         <c:import url="_MENU.jsp"/>
         <main>
             <c:forEach items="${listeDesFilms}" var="filmActuel">
-                <p>${filmActuel.titre} | <a href="detailsFilm?idDuFilm=${f.id}"><button>Détails</button></a></p>
+                <p>${filmActuel.titre} | <a href="detailsFilm?idDuFilm=${filmActuel.id}"><button>Détails</button></a></p>
             </c:forEach>
         </main>
         <c:import url="_PIED.jsp"/>
