@@ -16,7 +16,11 @@
         <c:import url="_ENTETE.jsp"/>
         <c:import url="_MENU.jsp"/>
         <main>
-            <p>Mon contenu</p>
+            <c:forEach items="${listeDesFilms} var="filmActuel">
+                <p>${filmActuel.titre}</p>
+                
+                
+            </c:forEach>
         </main>
         <c:import url="_PIED.jsp"/>
     </body>

@@ -21,7 +21,7 @@ import streamingweb.service.FilmServiceImpl;
  *
  * @author renob
  */
-@WebServlet(name = "FilmsServlet", urlPatterns = {"/films"})
+@WebServlet(name = "FilmsServlet", urlPatterns = {"/"})
 public class FilmsServlet extends HttpServlet {
     private FilmService service = new FilmServiceImpl();
     @Override
