@@ -17,19 +17,13 @@
         <c:import url="_MENU.jsp"/>
         <main>
             <h2>Détails du Film</h2>
-            
-            <c:forEach items="${MonFilm}" var="filmSelectionner">
-                <p>Titre : ${filmSelectionner.titre} </p>   
-                    
-                    
-            </c:forEach>
-            
-<!--            doGet(req, resp);
-                req.getParaeter("");
-            -->
-            
-            
-            
+            <p>Titre : ${film.titre} </p>   
+            <p>Realisateur : </p> 
+            <p>Année : ${film.annee} </p> 
+            <p>Acteurs :  </p> 
+            <p>Genre : ${film.genre.nom} </p> 
+            <p>Pays :  </p> 
+            <p>Synposis : ${film.synopsis} </p> 
         </main>
         <c:import url="_PIED.jsp"/>
     </body>

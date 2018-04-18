@@ -20,14 +20,14 @@ import streamingweb.service.FilmServiceImpl;
  *
  * @author renob
  */
-@WebServlet(name = "DetailFilmsServlet", urlPatterns = {"/DetailFilmsServlet"})
+@WebServlet(name = "DetailFilmsServlet", urlPatterns = {"/detail_film"})
 public class DetailsFilmsServlet extends HttpServlet {
     private FilmService service = new FilmServiceImpl();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         // 1. Réceptionner l'ID du film sélectionner
-        String idString = req.getParameter("idFilm");
+        String idString = req.getParameter("idDuFilm");
 
         // 2. Récupérer film à pardir de la SGBD et de l'ID
         Film film = service.rechercheParId(Long.parseLong(idString));
@@ -36,7 +36,7 @@ public class DetailsFilmsServlet extends HttpServlet {
         req.setAttribute("film", film);
        
         // 4. Forwart to KSP
-        req.getRequestDispatcher("detailsFilm.jsp");
+        req.getRequestDispatcher("detailsFilm.jsp").forward(req, resp);
     }
 
     
