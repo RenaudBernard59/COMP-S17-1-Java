@@ -7,34 +7,37 @@ package streamingweb.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import streamingweb.entity.Film;
-import streamingweb.service.FilmService;
-import streamingweb.service.FilmServiceImpl;
 
 /**
  *
  * @author renob
  */
-@WebServlet(name = "FilmsServlet", urlPatterns = {"/films"})
-public class DetailFilmsServlet1 extends HttpServlet {
-    private FilmService service = new FilmServiceImpl();
+@WebServlet(name = "DetailFilmsServlet", urlPatterns = {"/DetailFilmsServlet"})
+public class DetailsFilmsServlet extends HttpServlet {
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        //1. Récupérer la liste de films avec FilmService
-        List<Film> films = service.listerFilms();
-
-        //2. Envoyer liste films film comme attribut request
-        req.setAttribute("listeDesFilms", films);
-
-        //3. Envoyer vers films.jsp
-        req.getRequestDispatcher("detailsFilm.jsp").forward(req, resp);
+        // 1. Réceptionner l'ID du film sélectionner
+        
+        
+        
+        // 2.
+        
+        
+        
+        
+       //3.
+        
     }
+
+    
+    
+    
     
     
 }
