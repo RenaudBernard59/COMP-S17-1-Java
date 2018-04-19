@@ -26,14 +26,14 @@ public class DetailsSeriesServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        // 1. Réceptionner l'ID du film sélectionner
+        // 1. Réceptionner l'ID du serie sélectionner
         String idString = req.getParameter("idSerie");
 
-        // 2. Récupérer film à pardir de la SGBD et de l'ID
+        // 2. Récupérer serie à pardir de la SGBD et de l'ID
         Serie serie = service.rechercheParId(Long.parseLong(idString));
 
-        // 3. Set film en attribut requete
-        req.setAttribute("film", serie);
+        // 3. Set serie en attribut requete
+        req.setAttribute("serie", serie);
        
         // 4. Forwart to KSP
         req.getRequestDispatcher("detailsSerie.jsp").forward(req, resp);

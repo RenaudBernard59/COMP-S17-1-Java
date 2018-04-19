@@ -24,5 +24,10 @@ public class SerieDAOJpaImpl implements SerieDAO {
         List<Serie> series = q.getResultList();
         return series;
     }
-    
+    @Override
+    public Serie trouverDetailSerie(long id) {
+        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+        return em.find(Serie.class, id);
+        
+    }
 }

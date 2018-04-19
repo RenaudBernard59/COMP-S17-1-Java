@@ -13,5 +13,6 @@ import streamingweb.entity.Serie;
  * @author renob
  */
 public interface SerieDAO {
+    public Serie trouverDetailSerie(long id);
     public List<Serie> lister();
 }
