@@ -4,12 +4,10 @@
  * and open the template in the editor.
  */
 package streamingweb.service;
-
 import java.util.List;
 import streamingweb.dao.FilmDAO;
 import streamingweb.dao.FilmDAOJpaImpl;
 import streamingweb.entity.Film;
-
 /**
  *
  * @author renob
@@ -20,7 +18,6 @@ public class FilmServiceImpl implements FilmService {
     public List<Film> listerFilms() {
         return dao.lister();
     }
-        
     @Override
     public Film rechercheParId(long id) {
         return dao.trouverDetailFilm(id);

@@ -7,11 +7,13 @@ package streamingweb.service;
 
 import java.util.List;
 import streamingweb.entity.Serie;
-
+import static streamingweb.entity.Serie_.id;
 /**
  *
  * @author renob
  */
 public interface SerieService {
     public List<Serie> listerSeries();
+    
+    public Serie rechercheParId(long id);
 }

@@ -8,7 +8,6 @@ package streamingweb.service;
 import java.util.List;
 import streamingweb.entity.Film;
 import static streamingweb.entity.Film_.id;
-
 /**
  *
  * @author renob

@@ -54,7 +54,7 @@ public class Personne implements Serializable {
         @JoinColumn(name = "ACTEURS_ID", referencedColumnName = "ID")}, inverseJoinColumns = {
         @JoinColumn(name = "FILMSJOUES_ID", referencedColumnName = "ID")})
     @ManyToMany
-    private List<Film> filmsInterpretes;
+    private List<Film> filmList1;
     @JoinTable(name = "ACTEUR_SERIE", joinColumns = {
         @JoinColumn(name = "ACTEURS_ID", referencedColumnName = "ID")}, inverseJoinColumns = {
         @JoinColumn(name = "SERIESJOUES_ID", referencedColumnName = "ID")})
@@ -108,12 +108,12 @@ public class Personne implements Serializable {
         this.filmsRealises = filmsRealises;
     }
 
-    public List<Film> getFilmsInterpretes() {
-        return filmsInterpretes;
+    public List<Film> getFilmList1() {
+        return filmList1;
     }
 
-    public void setFilmsInterpretes(List<Film> filmsInterpretes) {
-        this.filmsInterpretes = filmsInterpretes;
+    public void setFilmList1(List<Film> filmList1) {
+        this.filmList1 = filmList1;
     }
 
     public List<Serie> getSerieList1() {

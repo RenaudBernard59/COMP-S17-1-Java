@@ -17,7 +17,7 @@
         <c:import url="_MENU.jsp"/>
         <main>
             <c:forEach items="${listeDesSeries}" var="serieActuel">
-                <p>${serieActuel.titre}</p>
+                <p>${serieActuel.titre} | <a href="detail_serie?idSerie=${SerieActuel.id}"><button>Détails</button></a></p>
                 
                 
             </c:forEach>
