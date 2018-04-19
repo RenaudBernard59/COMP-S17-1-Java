@@ -43,9 +43,9 @@ public class Serie implements Serializable {
     private String titre;
     @ManyToMany(mappedBy = "serieList")
     private List<Pays> paysList;
-    @ManyToMany(mappedBy = "serieList")
+    @ManyToMany(mappedBy = "filmsRealises")
     private List<Personne> personneList;
-    @ManyToMany(mappedBy = "serieList1")
+    @ManyToMany(mappedBy = "filmsInterpretes")
     private List<Personne> personneList1;
     @JoinColumn(name = "GENRE_ID", referencedColumnName = "ID")
     @ManyToOne

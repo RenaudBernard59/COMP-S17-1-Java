@@ -49,12 +49,12 @@ public class Personne implements Serializable {
         @JoinColumn(name = "REALISATEURS_ID", referencedColumnName = "ID")}, inverseJoinColumns = {
         @JoinColumn(name = "FILMSREALISES_ID", referencedColumnName = "ID")})
     @ManyToMany
-    private List<Film> filmList;
+    private List<Film> filmsRealises;
     @JoinTable(name = "ACTEUR_FILM", joinColumns = {
         @JoinColumn(name = "ACTEURS_ID", referencedColumnName = "ID")}, inverseJoinColumns = {
         @JoinColumn(name = "FILMSJOUES_ID", referencedColumnName = "ID")})
     @ManyToMany
-    private List<Film> filmList1;
+    private List<Film> filmsInterpretes;
     @JoinTable(name = "ACTEUR_SERIE", joinColumns = {
         @JoinColumn(name = "ACTEURS_ID", referencedColumnName = "ID")}, inverseJoinColumns = {
         @JoinColumn(name = "SERIESJOUES_ID", referencedColumnName = "ID")})
@@ -100,20 +100,20 @@ public class Personne implements Serializable {
         this.serieList = serieList;
     }
 
-    public List<Film> getFilmList() {
-        return filmList;
+    public List<Film> getFilmsRealises() {
+        return filmsRealises;
     }
 
-    public void setFilmList(List<Film> filmList) {
-        this.filmList = filmList;
+    public void setFilmsRealises(List<Film> filmsRealises) {
+        this.filmsRealises = filmsRealises;
     }
 
-    public List<Film> getFilmList1() {
-        return filmList1;
+    public List<Film> getFilmsInterpretes() {
+        return filmsInterpretes;
     }
 
-    public void setFilmList1(List<Film> filmList1) {
-        this.filmList1 = filmList1;
+    public void setFilmsInterpretes(List<Film> filmsInterpretes) {
+        this.filmsInterpretes = filmsInterpretes;
     }
 
     public List<Serie> getSerieList1() {
