@@ -6,6 +6,6 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <nav>
-    <a href="films"><button>Films</button></a>
-    <a href="series"><button>Séries</button></a>
+    <a href="lister_films"><button>Films</button></a>
+    <a href="lister_series"><button>Séries</button></a>
 </nav>

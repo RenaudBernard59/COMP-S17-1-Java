@@ -21,8 +21,8 @@ import streamingweb.service.FilmServiceImpl;
  *
  * @author renob
  */
-@WebServlet(name = "FilmsServlet", urlPatterns = {"/"})
-public class FilmsServlet extends HttpServlet {
+@WebServlet(name = "ListerFilmsServlet", urlPatterns = {"/lister_films"})
+public class ListerFilmsServlet extends HttpServlet {
     private FilmService service = new FilmServiceImpl();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

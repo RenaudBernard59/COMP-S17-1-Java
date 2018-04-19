@@ -21,8 +21,8 @@ import streamingweb.service.SerieServiceImpl;
  *
  * @author renob
  */
-@WebServlet(name = "SeriesServlet", urlPatterns = {"/series"})
-public class SeriesServlet extends HttpServlet {
+@WebServlet(name = "ListerSeriesServlet", urlPatterns = {"/lister_series"})
+public class ListerSeriesServlet extends HttpServlet {
     private SerieService service = new SerieServiceImpl();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
