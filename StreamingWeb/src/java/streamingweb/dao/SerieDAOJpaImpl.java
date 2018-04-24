@@ -30,4 +30,19 @@ public class SerieDAOJpaImpl implements SerieDAO {
         return em.find(Serie.class, id);
         
     }
+    @Override
+    public List<Long> listerSaisonsSerie() {
+        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+        Query q = em.createQuery("SELECT ss FROM Serie s JOIN serie.saison ss");
+        List<Long> saisons = q.getResultList();
+        return saisons;
+    }
+    @Override
+    public List<Long> listerEpisodesSaisonSerie() {
+        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+        Query q = em.createQuery("SELECT se FROM Serie s JOIN serie.saison ss JOIN ss.episode se ");
+        List<Long> episodes = q.getResultList();
+        return episodes;
+    }
+
 }
